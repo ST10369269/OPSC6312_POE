@@ -67,7 +67,7 @@ Whenever code is pushed:
 
 5. Release Notes
 Version 1.0.0 (Prototype)
-Release Date: June 2025
+Date: June 2025
 Highlights:
 •	Basic splash screen, login, and register activities.
 •	Bottom navigation structure.
@@ -75,7 +75,7 @@ Highlights:
 •	Static recipe list with sample data.
 
 Version 1.1.0 (Current Release)
-Release Date: October 2025
+Date: October 2025
 Enhancements and Updates:
 •	Integrated TheMealDB REST API for real recipe fetching.
 •	Added RecipeDetailActivity with image, ingredients, and instructions.
