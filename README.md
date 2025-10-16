@@ -38,9 +38,9 @@ The CookBook App project is hosted on GitHub, providing:
 •	Collaboration features like branches and pull requests.
 •	Centralized storage for code, documentation, and assets.
 Branching strategy:
-•	main: Stable release-ready code.
-•	develop: Active development branch.
-•	feature/*: Individual features (e.g., feature/recipe-api, feature/auth).
+•	main.
+•	master (Active development branch)
+
 3.2 GitHub Actions Workflow
 GitHub Actions automate the build and test processes whenever code is pushed or a pull request is opened.
 Example workflow file: .github/workflows/android-ci.yml
