@@ -29,19 +29,17 @@ class RecipeAdapter(private val recipes: List<Recipe>) :
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = recipes[position]
 
-        // <-- Use the exact property names from your Meal data class
         holder.recipeTitle.text = recipe.strMeal ?: "Untitled"
         holder.recipeDescription.text =
             (recipe.strInstructions?.take(120) ?: "No description available")
 
-        // Load image with Glide. Use a valid drawable resource as placeholder.
         Glide.with(holder.itemView.context)
-            .load(recipe.strMealThumb)                      // this must match your data class
-            .placeholder(R.drawable.ic_launcher_background) // replace with a real drawable you have
-            .error(R.drawable.ic_launcher_background)       // fallback
+            .load(recipe.strMealThumb)                      
+            .placeholder(R.drawable.ic_launcher_background) 
+            .error(R.drawable.ic_launcher_background)       
             .into(holder.recipeImage)
 
-        // Click to open detail activity
+        
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, RecipeDetailActivity::class.java).apply {
                 putExtra("RECIPE_NAME", recipe.strMeal)
