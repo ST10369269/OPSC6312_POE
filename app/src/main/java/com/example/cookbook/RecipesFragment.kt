@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cookbook.databinding.FragmentRecipesBinding
 import android.widget.Toast
+import com.example.cookbook.Meal
+import com.example.cookbook.MealResponse
+import com.example.cookbook.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -43,9 +46,7 @@ class RecipesFragment : Fragment() {
             override fun onResponse(call: Call<MealResponse>, response: Response<MealResponse>) {
                 val meals = response.body()?.meals
                 if (meals != null) {
-                    binding.rvRecipes.adapter = RecipeAdapter(meals.map {
-                        Recipe(it.strMeal, it.strInstructions ?: "No instructions available")
-                    })
+                    binding.rvRecipes.adapter = RecipeAdapter(meals)
                 } else {
                     Toast.makeText(requireContext(), "No recipes found!", Toast.LENGTH_SHORT).show()
                 }
@@ -62,6 +63,3 @@ class RecipesFragment : Fragment() {
         _binding = null
     }
 }
-
-
-data class Recipe(val title: String, val description: String)
