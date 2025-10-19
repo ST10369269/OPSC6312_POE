@@ -8,10 +8,10 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.example.cookbook.data.Meal
+import com.example.cookbook.Meal
 import com.example.cookbook.R
 
-class RecipeAdapter(private val recipes: List<Recipe>) :
+class RecipeAdapter(private val recipes: List<Meal>) :
     RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
     class RecipeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
