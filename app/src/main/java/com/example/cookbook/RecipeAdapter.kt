@@ -7,48 +7,48 @@ import android.content.Intent
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.cookbook.databinding.ItemRecipeBinding
 import com.bumptech.glide.Glide
 import com.example.cookbook.Meal
 import com.example.cookbook.R
 
-class RecipeAdapter(private val recipes: List<Meal>) :
+class RecipeAdapter(private val meals: List<Meal>) :
     RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
-    class RecipeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val recipeImage: ImageView = itemView.findViewById(R.id.recipeImage)
-        val recipeTitle: TextView = itemView.findViewById(R.id.recipeTitle)
-        val recipeDescription: TextView = itemView.findViewById(R.id.recipeDescription)
+    class RecipeViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+        val recipeImage: ImageView = view.findViewById(R.id.recipeImage)
+        val recipeTitle: TextView = view.findViewById(R.id.recipeTitle)
+        val recipeDescription: TextView = view.findViewById(R.id.recipeDescription)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_recipe, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recipe, parent, false)
         return RecipeViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
-        val recipe = recipes[position]
+        val meal = meals[position]
 
-        holder.recipeTitle.text = recipe.strMeal ?: "Untitled"
-        holder.recipeDescription.text =
-            (recipe.strInstructions?.take(120) ?: "No description available")
+        //Bind text
+        holder.recipeTitle.text = meal.strMeal
+        holder.recipeDescription.text = meal.strInstructions ?: "No instructions available"
 
+        // Load image via Glide (placeholder should exist in res/drawable)
         Glide.with(holder.itemView.context)
-            .load(recipe.strMealThumb)                      
-            .placeholder(R.drawable.ic_launcher_background) 
-            .error(R.drawable.ic_launcher_background)       
+            .load(meal.strMealThumb)
+            .placeholder(R.drawable.placeholder)
             .into(holder.recipeImage)
 
-        
+        // Click -> open detail activity
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, RecipeDetailActivity::class.java).apply {
-                putExtra("RECIPE_NAME", recipe.strMeal)
-                putExtra("RECIPE_IMAGE", recipe.strMealThumb)
-                putExtra("RECIPE_INSTRUCTIONS", recipe.strInstructions)
-            }
-            holder.itemView.context.startActivity(intent)
+            val context = holder.itemView.context
+            val intent = Intent(context, RecipeDetailActivity::class.java)
+            intent.putExtra("meal_name", meal.strMeal)
+            intent.putExtra("meal_instructions", meal.strInstructions)
+            intent.putExtra("meal_thumb", meal.strMealThumb)
+            context.startActivity(intent)
         }
     }
 
-    override fun getItemCount(): Int = recipes.size
+    override fun getItemCount(): Int = meals.size
 }
