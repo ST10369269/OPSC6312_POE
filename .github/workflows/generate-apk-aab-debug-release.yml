@@ -42,6 +42,9 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
+      - name: Clean Build Cache
+        run: ./gradlew clean
+      
       # Run Tests Build
       - name: Run gradle tests
         run: ./gradlew test
