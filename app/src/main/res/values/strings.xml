@@ -4,6 +4,7 @@
     <string name="navigation_drawer_close">Navigation Drawer Close</string>
     <string name="yummy_recipes">Yummy Recipes</string>
     <string name="default_web_client_id">Default Web Client Id</string>
+    <string name="placeholder">Placeholder</string>
 
     <string-array name="measurement_units">
         <item>Metric (grams, liters)</item>
