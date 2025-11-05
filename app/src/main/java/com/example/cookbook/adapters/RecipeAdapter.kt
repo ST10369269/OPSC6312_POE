@@ -1,16 +1,16 @@
-package com.example.cookbook
+package com.example.cookbook.adapters
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import android.content.Intent
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.cookbook.databinding.ItemRecipeBinding
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cookbook.Meal
 import com.example.cookbook.R
+import com.example.cookbook.activities.RecipeDetailActivity
 
 class RecipeAdapter(private val meals: List<Meal>) :
     RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
