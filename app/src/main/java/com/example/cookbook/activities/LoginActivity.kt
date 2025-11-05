@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -12,7 +12,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.android.gms.auth.api.signin.*
 import com.google.android.gms.common.api.ApiException
-import kotlin.toString
 
 class LoginActivity : AppCompatActivity() {
 

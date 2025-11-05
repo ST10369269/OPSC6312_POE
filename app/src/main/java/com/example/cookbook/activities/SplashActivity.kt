@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

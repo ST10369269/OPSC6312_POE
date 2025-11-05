@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.google.firebase.auth.FirebaseAuth
 import android.view.View
 import android.widget.AdapterView
+import com.example.cookbook.R
 
 class SettingsActivity : AppCompatActivity() {
 

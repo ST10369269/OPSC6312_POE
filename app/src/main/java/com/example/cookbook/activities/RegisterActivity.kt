@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,8 +7,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
 import android.widget.*
+import com.example.cookbook.R
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.toString
 
 class RegisterActivity : AppCompatActivity() {
 
