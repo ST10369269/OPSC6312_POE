@@ -1,11 +1,10 @@
-package com.example.cookbook
+package com.example.cookbook.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.cookbook.R
 import android.widget.ArrayAdapter
 import com.example.cookbook.databinding.FragmentShoppingBinding
 

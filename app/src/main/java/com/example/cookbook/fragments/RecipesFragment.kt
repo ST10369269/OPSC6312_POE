@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cookbook.databinding.FragmentRecipesBinding
 import android.widget.Toast
-import com.example.cookbook.Meal
 import com.example.cookbook.MealResponse
+import com.example.cookbook.adapters.RecipeAdapter
 import com.example.cookbook.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
