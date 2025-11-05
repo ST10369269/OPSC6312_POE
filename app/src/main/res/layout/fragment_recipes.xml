@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".RecipesFragment">
+    tools:context=".fragments.RecipesFragment">
 
     <TextView
         android:layout_width="match_parent"
