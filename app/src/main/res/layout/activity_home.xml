@@ -22,22 +22,22 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:title="CookBook" />
 
-        <!-- Main area -->
+        <!-- Fragment container -->
         <FrameLayout
             android:id="@+id/frame_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/white" >
+            android:background="#f9f9f9" >
 
-            <TextView
+            <fragment
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Welcome to CookBook!"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/nav_graph" />
+
         </FrameLayout>
 
 
