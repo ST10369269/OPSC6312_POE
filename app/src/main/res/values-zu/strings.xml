@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">CookBook</string>
+    <string name="default_web_client_id">Default Web Client Id</string>
+    <string name="welcome_message">Siyakwamukela ekhaya le-CookBook!</string>
+    <string name="featured_recipes">Amaresiphi afakiwe</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="favorites">Izintandonkazi</string>
+    <string name="choose_language">Khetha ulimi</string>
+    <string name="select_unit">Khetha okuncamelayo kweyunithi</string>
+    <string name="welcome_back">Siyakwamukela!</string>
+    <string name="email">I-imeyili</string>
+    <string name="password">Iphasiwedi</string>
+    <string name="login">Ngena ngemvume</string>
+    <string name="login_with_google">Ngena ngemvume nge-google</string>
+    <string name="don_t_have_an_account_sign_up">Awunayo i-akhawunti? Bhalisela</string>
+    <string name="recipe_details">Imininingwane yeresiphi</string>
+    <string name="placeholder" />
+    <string name="add_ingredients_to_shopping_list">Engeza izithako ohlwini lokuthenga</string>
+    <string name="save_to_favorites">Londoloza ezintandokazini</string>
+    <string name="welcome_to_cookbook">Siyakwamukela ku-CookBook</string>
+    <string name="confirm_password">Qinisekisa Iphasiwedi</string>
+    <string name="register">Bhalisa</string>
+    <string name="already_have_an_account_login">Usevele unayo i-akhawunti? Ngena ngemvume</string>
+    <string name="my_favorite_recipes">Amaresiphi engiwathandayo</string>
+    <string name="clear_all_favorites">Sula zonke izintandokazi</string>
+    <string name="welcome_back_chef">Siyakwamukela, Chef 👋</string>
+    <string name="discover_your_next_favorite_recipe_today">Zitholele iresiphi yakho oyintandokazi elandelayo namuhla!</string>
+    <string name="search_recipes">Sesha amaresiphi…</string>
+    <string name="fresh_greens_with_chicken">Imifino emisha enenkukhu</string>
+    <string name="categories">🍴 Izigaba</string>
+    <string name="breakfast">Ukudla kwasekusseni</string>
+    <string name="lunch">Isidlo sasemini</string>
+    <string name="dinner">Isidlo sakusihlwa</string>
+    <string name="dessert">Uphudingi</string>
+    <string name="ready_to_cook_something_amazing">🍲 Ulungele ukupheka into emangalisayo?</string>
+    <string name="chicken_salad">Isaladi yenkukhu</string>
+    <string name="classic_italian_dish">Classic Italian dish</string>
+    <string name="all_recipes">Zonke izindlela zokupheka</string>
+    <string name="enable_dark_mode">Nika amandla imodi emnyama</string>
+    <string name="enable_notifications">Nika amandla izaziso</string>
+    <string name="logout">Phuma</string>
+    <string name="your_shopping_list">Uhlu lwakho lokuthenga</string>
+    <string name="add_shopping_item">Engeza into yokuthenga</string>
+    <string name="add_item">Engeza into</string>
+    <string name="recipe_name">Igama leresiphi</string>
+    <string name="instructions_preview">Ukuhlola kuqala imiyalelo…</string>
+    <string name="recipe_title">Isihloko Seresiphi</string>
+    <string name="recipe_description">Ukukhohlisa kweresiphi</string>
+    <string name="welcome_user">Siyakwamukela, msebenzisi!</string>
+    <string name="home">Ikhaya</string>
+    <string name="recipes">Amaresiphi</string>
+    <string name="shopping">Ukuthenga</string>
+    <string name="display_options">Izinketho zokubonisa</string>
+    <string name="notifications">Izaziso</string>
+    <string name="measurement_units_label">Amayunithi okulinganisa</string>
+    <string name="language_label">Ulimi</string>
+    <string name="logout_button_desc">Phuma</string>
+    <string name="settings_toolbar_desc">Settings Toolbar</string>
+    <string name="notifications_enabled">Izaziso zinikwe amandla</string>
+    <string name="notifications_disabled">Izaziso zikhutshaziwe</string>
+    <string name="logged_out">Ukhishiwe</string>
+
+
+    <string-array name="measurement_units">
+        <item>Metric (grams, liters)</item>
+        <item>Imperial (cups, ounces)</item>
+    </string-array>
+</resources>

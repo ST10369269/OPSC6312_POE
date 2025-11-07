@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">CookBook</string>
     <string name="default_web_client_id">Default Web Client Id</string>
-
     <string name="welcome_message">Welcome to CookBook Home!</string>
     <string name="featured_recipes">Featured Recipes</string>
     <string name="settings">Settings</string>
@@ -44,16 +43,31 @@
     <string name="add_shopping_item">Add shopping item</string>
     <string name="add_item">Add Item</string>
     <string name="recipe_name">Recipe Name</string>
-    <string name="instructions_preview">Instructions preview...</string>
+    <string name="instructions_preview">Instructions preview…</string>
     <string name="recipe_title">Recipe Title</string>
     <string name="recipe_description">Recipe Description</string>
     <string name="welcome_user">Welcome, User!</string>
     <string name="home">Home</string>
     <string name="recipes">Recipes</string>
     <string name="shopping">Shopping</string>
+    <string name="display_options">Display Options</string>
+    <string name="notifications">Notifications</string>
+    <string name="measurement_units_label">Measurements Units</string>
+    <string name="language_label">Language</string>
+    <string name="logout_button_desc">Logout</string>
+    <string name="settings_toolbar_desc">Settings Toolbar</string>
+    <string name="notifications_enabled">Notifications enabled</string>
+    <string name="notifications_disabled">Notifications disabled</string>
+    <string name="logged_out">You have been logged out</string>
+
 
     <string-array name="measurement_units">
         <item>Metric (grams, liters)</item>
         <item>Imperial (cups, ounces)</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>isiZulu</item>
     </string-array>
 </resources>
