@@ -11,67 +11,142 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:gravity="center_horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
         <!-- Top toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?android:attr/colorActivatedHighlight"
+            android:background="#FF5252"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:title="CookBook" />
+            android:title="@string/app_name"
+            android:contentDescription="@string/settings_toolbar_desc" />
 
-
-
+        <!-- Settings title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/settings"
             android:textSize="26sp"
             android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:textColor="#000000"  />
+            android:textColor="#000000" />
+
+        <!-- ===== Display Options Section ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:text="@string/display_options"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" />
 
         <Switch
             android:id="@+id/switchDarkMode"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginBottom="10dp"
             android:padding="8dp"
             android:text="@string/enable_dark_mode"
-            android:textSize="18sp"
+            android:textSize="16sp"
+            android:contentDescription="@string/enable_dark_mode"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <!-- ===== Notifications Section ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="10dp" />
+
+        <TextView
+            android:text="@string/notifications"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" />
 
         <Switch
             android:id="@+id/switchNotifications"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginBottom="20dp"
             android:padding="8dp"
             android:text="@string/enable_notifications"
-            android:textSize="18sp"
+            android:textSize="16sp"
+            android:contentDescription="@string/enable_notifications"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <!-- ===== Measurement Units Section ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="10dp" />
+
+        <TextView
+            android:text="@string/measurement_units_label"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" />
 
         <Spinner
             android:id="@+id/spinnerUnits"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginBottom="190dp"
-            android:entries="@array/measurement_units" />
+            android:entries="@array/measurement_units"
+            android:contentDescription="@string/measurement_units_label" />
+
+        <!-- ===== Language Section ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="10dp" />
+
+        <TextView
+            android:text="@string/language_label"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" />
+
+        <Spinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:entries="@array/language_options"
+            android:contentDescription="@string/language_label" />
+
+        <!-- ===== Logout Section ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp" />
 
         <Button
             android:id="@+id/btnLogout"
             android:text="@string/logout"
-            android:layout_marginTop="30dp"
             android:backgroundTint="#FF5252"
             android:textColor="#FFFFFF"
-            android:layout_marginBottom="100dp"
+            android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:contentDescription="@string/logout_button_desc" />
 
     </LinearLayout>
-
 </ScrollView>
