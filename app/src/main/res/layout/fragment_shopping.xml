@@ -7,9 +7,9 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Your Shopping List"
+        android:text="@string/your_shopping_list"
         android:textStyle="bold"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="24dp"
@@ -18,13 +18,15 @@
 
     <EditText
         android:id="@+id/itemInput"
-        android:hint="Add shopping item"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="55dp"
+        android:hint="@string/add_shopping_item" />
 
     <Button
         android:id="@+id/addButton"
-        android:text="Add Item"
+        android:text="@string/add_item"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="?android:attr/colorActivatedHighlight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
