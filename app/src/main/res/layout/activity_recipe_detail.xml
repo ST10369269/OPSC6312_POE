@@ -21,12 +21,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?android:attr/colorActivatedHighlight"
-            android:title="Recipe Details"
+            android:title="@string/recipe_details"
             android:titleTextColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/detailImage"
             android:layout_width="match_parent"
+            android:src="@drawable/placeholder"
             android:layout_height="220dp"
             android:scaleType="centerCrop"
             android:contentDescription="@string/placeholder" />
@@ -54,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:backgroundTint="?android:attr/colorActivatedHighlight"
-            android:text="Add Ingredients to Shopping List" />
+            android:text="@string/add_ingredients_to_shopping_list" />
 
         <Button
             android:id="@+id/btnSaveFavorite"
@@ -63,7 +64,7 @@
             android:layout_marginTop="24dp"
             android:layout_weight="1"
             android:backgroundTint="?android:attr/colorActivatedHighlight"
-            android:text="Save to Favorites" />
+            android:text="@string/save_to_favorites" />
 
     </LinearLayout>
 </ScrollView>

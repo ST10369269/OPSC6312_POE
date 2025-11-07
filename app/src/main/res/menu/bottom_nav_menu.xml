@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nav_home"
-        android:title="Home"
+        android:title="@string/home"
         android:icon="@drawable/ic_home" />
 
     <item
         android:id="@+id/nav_recipes"
-        android:title="Recipes"
+        android:title="@string/recipes"
         android:icon="@drawable/ic_recipe" />
 
     <item
@@ -16,7 +16,7 @@
         android:icon="@drawable/ic_favorite" />
 
     <item android:id="@+id/nav_shopping"
-        android:title="Shopping"
+        android:title="@string/shopping"
         android:icon="@drawable/ic_shopping_cart" />
 
     <item android:id="@+id/nav_settings"
