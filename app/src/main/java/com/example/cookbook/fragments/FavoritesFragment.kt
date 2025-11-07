@@ -5,14 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.cookbook.R
 import android.content.Context
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.example.cookbook.adapters.FavoritesAdapter
 import com.example.cookbook.databinding.FragmentFavoritesBinding
-import com.example.cookbook.databinding.ItemFavoriteBinding
+import com.example.cookbook.helpers.NotificationHelper
 
 class FavoritesFragment : Fragment() {
 
@@ -28,6 +26,11 @@ class FavoritesFragment : Fragment() {
         _binding = FragmentFavoritesBinding.inflate(inflater, container, false)
         sharedPreferences = requireContext().getSharedPreferences("Favorites", Context.MODE_PRIVATE)
 
+        val prefs = requireActivity().getSharedPreferences("CookBookPrefs", Context.MODE_PRIVATE)
+        if (prefs.getBoolean("notifications_enabled", false)) {
+            NotificationHelper.showNotification(requireContext(), "Recipe Saved!", "You added a recipe to your favorites.")
+        }
+
         // Load favorites
         val favoriteRecipes = loadFavorites()
 
@@ -37,6 +40,7 @@ class FavoritesFragment : Fragment() {
 
         binding.btnClearFavorites.setOnClickListener {
             clearFavorites()
+
         }
 
         return binding.root
