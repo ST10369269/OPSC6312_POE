@@ -11,8 +11,9 @@ import androidx.fragment.app.Fragment
 import com.example.cookbook.fragments.HomeFragment
 import com.example.cookbook.R
 import com.example.cookbook.fragments.RecipesFragment
-import com.example.cookbook.fragments.ShoppingFragment
+import com.example.cookbook.fragments.ShoppingListFragment
 import com.example.cookbook.fragments.FavoritesFragment
+import com.example.cookbook.fragments.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -41,8 +42,8 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_home -> replaceFragment(HomeFragment())
                 R.id.nav_recipes -> replaceFragment(RecipesFragment())
                 R.id.nav_favorites -> replaceFragment(FavoritesFragment())
-                R.id.nav_shopping -> replaceFragment(ShoppingFragment())
-                R.id.nav_settings -> startActivity(Intent(this, SettingsActivity::class.java))
+                R.id.nav_shopping -> replaceFragment(ShoppingListFragment())
+                R.id.nav_settings -> replaceFragment(SettingsFragment())
             }
             true
         }
