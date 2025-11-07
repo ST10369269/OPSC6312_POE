@@ -31,6 +31,7 @@
         <activity android:name=".activities.LoginActivity" />
 
         <activity android:name=".activities.RecipeDetailActivity" />
-    </application>
 
+    </application>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 </manifest>
