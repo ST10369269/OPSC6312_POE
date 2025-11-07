@@ -9,9 +9,9 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="All Recipes"
+        android:text="@string/all_recipes"
         android:textStyle="bold"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:hint="Search recipes..."
         android:drawableStart="@android:drawable/ic_menu_search"
+        android:inputType="text"
         android:padding="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
