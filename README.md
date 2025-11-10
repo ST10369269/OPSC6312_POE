@@ -1,144 +1,178 @@
-CookBook Android Application Report
+🍳 CookBook App – USER SUPPORT & DOCUMENTATION
 
-1. PROJECT OVERVIEW
-  1.1 Purpose of the Application
-  The Cookbook App is a mobile recipe management system designed to help users conveniently explore, save, and organize meal recipes. It allows users to:
-    •	Browse and view detailed recipes fetched from a public REST API (TheMealDB).
-    •	Save their favorite recipes for offline access.
-    •	Create a personalized shopping list based on ingredients.
-    •	Manage their user profile and settings.
-    •	Benefit from innovative features such as Mood-Based Filtering, Interactive Cook Mode, and Smart Shopping List.
-  The application aims to enhance user convenience in meal planning and cooking by integrating interactive, dynamic, and intelligent features.
+  📘 1. INTRODUCTION
 
-2. DESIGN CONSIDERATIONS
-  2.1 User Interface (UI)
-  The UI is designed using Android Studio with Kotlin and follows Material Design principles:
-    •	Clean, intuitive layout with consistent colors and typography.
-    •	Bottom Navigation Bar for seamless access to major sections: Home, Recipes, Shopping List, and Settings.
-    •	Activity and Fragment-based architecture for modular design and easier navigation.
-   
-  2.2 User Experience (UX)
-  Key UX goals include:
-    •	Simplicity: Easy-to-navigate screens for all age groups.
-    •	Responsiveness: Optimized for different screen sizes and device orientations.
-    •	Engagement: Use of visuals, icons, and animations to make interaction enjoyable.
+    CookBook is a mobile application designed to help users discover, save, and manage recipes easily.
+    It provides a simple interface for exploring new meals, viewing detailed recipes, saving favorites, creating shopping lists, and customizing app preferences such as dark mode, language, and units of           measurement.
+
+  🎯 2. PURPOSE OF THE APP
+
+    The main goal of CookBook is to provide a personalized recipe management experience that supports multi-language users and enhances daily cooking routines.
+    Users can:
+
+      Browse and view recipes fetched from an online REST API.
+
+      Save recipes to a local “Favorites” list.
+
+      Add items to a personal shopping list.
+
+    Manage app settings including dark mode, notifications, and language preferences.
+
+  🧩 3. KEY FEATURES
+  
+  Feature	Description
+    🔐 User Authentication	Secure login, registration, and logout functionality.
+    📖 Recipe Browser	Displays a list of recipes from a public meal API.
+    📄 Recipe Details	Full instructions and images for selected recipes.
+    ❤️ Favorites	Save and manage favorite recipes locally using SharedPreferences.
+    🛒 Shopping List	Add ingredients from recipes and manage them conveniently.
+    ⚙️ Settings	Toggle dark mode, enable notifications, choose units, and switch languages.
+    🌍 Multi-Language Support	Supports English and two South African languages (e.g., isiZulu and Sesotho).
+    🔔 Notifications	Local reminders for new recipes and saved items.
+    🧑‍🍳 User-Friendly UI	Simple, modern design with bottom navigation for quick access.
     
-  2.3 Technical Design
-    •	Architecture: MVVM (Model-View-ViewModel) for separation of concerns.
-    •	Data Layer: Uses Retrofit for API calls and Room Database for local storage.
-    •	Authentication: Firebase Authentication for user sign-up and login.
-    •	Offline Access: Caching recipes for offline viewing using Room Database.
-    •	API Integration: Fetching recipes dynamically from TheMealDB REST API.
+🧱 4. APP ARCHITECTURE
 
-  2.4 Accessibility
-    •	Text contrast, font size, and button spacing follow WCAG guidelines.
-    •	Voice instructions enable inclusive cooking experiences for visually impaired users.
+    Frontend: Android (Kotlin, XML, Jetpack Components)
 
-3. GitHub & GitHub ACTIONS UTILISATION
-  3.1 GitHub Repository Management
-  The CookBook App project is hosted on GitHub, providing:
-    •	Version control for all source files.
-    •	Collaboration features like branches and pull requests.
-    •	Centralized storage for code, documentation, and assets.
-   
-  Branching strategy:
-    •	main.
-    •	master (Active development branch)
+      API: RESTful Meal API for recipe data (https://www.themealdb.com/api/json/v1/1/search.php)
 
-  3.2 GitHub Actions Workflow
-  GitHub Actions automate the build and test processes whenever code is pushed or a pull request is opened.
-  This ensures:
-    •	Every new commit is automatically built and tested.
-    •	Errors are caught early before merging.
-    •	The app remains consistent across environments — not just on the developer’s computer.
+      Local Storage: SharedPreferences for favorites, settings, and shopping list
 
-4. AUTOMATED TESTING
-  4.1 Testing Frameworks
-    •	JUnit for unit testing logic and API responses.
-    •	Espresso for UI interaction tests.
-    •	MockWebServer for API response testing without actual network calls.
-   
-  4.2 Test Objectives
-    •	Verify recipe fetching from the API.
-    •	Confirm Firebase authentication functions (login, signup, logout).
-    •	Validate navigation between screens.
-    •	Ensure offline recipe caching functions as expected.
-    
-  4.3 Continuous Testing via GitHub Actions
-  Whenever code is pushed:
-    •	Tests run automatically.
-    •	If a test fails, the developer is notified via GitHub Actions logs.
-    •	Successful builds indicate the app is stable for release.
+      Language Files: res/values/strings.xml, res/values-zu/strings.xml, res/values-st/strings.xml
 
-6. RELEASE NOTES
-  Version 1.0.0 (Prototype)
-  Date: June 2025
-  Highlights:
-    •	Basic splash screen, login, and register activities.
-    •	Bottom navigation structure.
-    •	Placeholder fragments for Home, Recipes, and Settings.
-    •	Static recipe list with sample data.
+      Navigation: Bottom navigation bar with Home, Recipes, Favorites, and Settings fragments
 
-  Version 1.1.0 (Current Release)
-  Date: October 2025
-  Enhancements and Updates:
-    •	Integrated TheMealDB REST API for real recipe fetching.
-    •	Added RecipeDetailActivity with image, ingredients, and instructions.
-    •	Created Shopping List Screen with dynamic item addition and deletion.
-    •	Implemented Firebase Authentication (login/register/logout).
-    •	Improved UI design with Material 3 components.
+      Build Tools: Android Studio, Gradle
 
-  Innovative Features Added
-  a) Interactive Cook Mode (Hands-Free Guidance)
-    Inspired by: Tasty’s step-by-step video tutorials
-    My twist: Introduce a “Cook Mode” - a voice-guided, hands-free recipe experience.
-    
-  Features:
-    •	Each recipe step displayed in large, swipeable cards
-    •	Voice commands like “Next step”, “Repeat”, “Set 5-minute timer”
-    •	Background music toggle while cooking
-    
-  Value Added:
-    •	Fun and modern
-    •	Improves accessibility (no touching screen with messy hands)
-    •	Differentiates you from static text-based recipe apps
+⚙️ 5. INSTALLATION & SETUP
 
-  b) Mood-Based Meal Suggestions (Emotional AI)
-    Inspired by: Yummly’s personalization + Paprika’s meal planning
-    My twist: Let users choose their current mood or energy level, and recommend meals that match it.
+    Clone or download the repository from GitHub:
 
-  Example:
-    •	Feeling lazy → “5-Minute Recipes”
-    •	Feeling creative → “Chef Mode: Try something new”
-    •	Feeling down → “Comfort Food”
-    •	Gym day → “High-Protein Picks”
-    
-  Value Added:
-    •	Emotional connection with users
-    •	Combines nutrition + emotion
-    •	Easy to gamify with streaks or badges
-
-  c) Smart Shopping List (Offline and Sync Later)
-    Complexity: easy
-    Why it’s simple:
-      •	Built with RoomDB or SQLite for offline storage.
-      •	When the user comes online, the data syncs to Firebase.
-      
-  Implementation idea:
-    •	Each recipe can have an “Add Ingredients to List” button.
-    •	The app stores items locally and marks them as “purchased” or “pending.”
-    •	Syncs automatically when the internet returns.
-    
-  Why it’s worth it:
-    •	Combines offline and cloud features (showing real skill).
-    •	Very practical — users always need this feature.
+    git clone https://github.com/<your-username>/CookBookApp.git
 
 
-6. Conclusion
-The CookBook Android App integrates modern mobile technologies and automation practices to deliver a high-quality, maintainable, and scalable solution.
-Through the combination of Firebase, REST APIs, Room Database, and GitHub Actions, the project ensures:
-•	Reliability (automated testing/builds)
-•	Maintainability (modular architecture)
-•	User satisfaction (intuitive UI + innovative features)
-This report documents the full lifecycle and development strategy, reflecting a professional software engineering workflow.
+      Open the project in Android Studio.
 
+      Wait for Gradle to sync.
+
+      Connect your emulator or Android device.
+
+      Run the app using ▶ Run ‘app’.
+
+👤 6. USING THE APP
+
+    🔑 Login & Registration
+
+      Open the app and sign up with your email and password.
+
+      Once registered, use your credentials to log in.
+
+    🏠 Home Screen
+
+      Displays a welcome message and featured recipe cards.
+
+      Tap a card to view full details.
+
+    🍲 Recipes
+
+      Browse recipes loaded from the public API.
+
+      Tap any recipe to open its detail page.
+
+    💾 Favorites
+
+      When viewing a recipe, tap “Save to Favorites”.
+
+      Visit the Favorites tab to view all saved recipes.
+
+    🛍 Shopping List
+
+      From the Recipe Detail page, tap “Add to Shopping List”.
+
+      Manage your ingredients in the Shopping List screen.
+
+    ⚙️ Settings
+
+      Enable Dark Mode or Notifications.
+
+      Select Measurement Units (e.g., metric/imperial).
+
+      Choose a Language: English, isiZulu, or Sesotho.
+
+      Tap Logout to securely exit the app.
+
+🧮 7. DESIGN CONSIDERATIONS
+
+      Accessibility: Clear fonts, contrast-friendly colors, and simple icons.
+
+      Localization: Language strings stored in multiple XML files.
+
+      Responsiveness: Layouts adapt to all screen sizes.
+
+      Performance: Uses ViewBinding and RecyclerView for smooth scrolling.
+
+      Data Persistence: Favorites and settings stored locally for offline use.
+
+🧪 8. AUTOMATED TESTING & GITHUB ACTIONS
+
+      Automated testing ensures the app runs correctly on all systems.
+      A GitHub Actions workflow is set up to:
+
+      Build the project using Gradle.
+
+      Run instrumented and unit tests.
+
+      Check for lint and dependency issues.
+
+      Provide build results in GitHub automatically.
+
+🚀 9. RELEASE NOTES
+
+  📦 Version 1.0 – Prototype
+
+    Login and Registration screens
+
+    Static home and recipes list
+
+    Basic navigation
+
+  🧩 Version 2.0 – Current Release
+
+  ✅ New Additions:
+
+    REST API Integration for live recipes
+
+    Recipe Detail screen with images & instructions
+
+    Favorites management using SharedPreferences
+
+    Shopping List screen
+
+    Local Notification System
+
+    Settings Fragment with Dark Mode and Language Switching
+
+    Multi-language support (English, isiZulu, Sesotho)
+
+    GitHub Actions for automated testing and builds
+
+💡 10. FUTURE ENHANCEMENTS
+
+    Firebase integration for push notifications
+
+    Cloud storage for user favorites and shopping lists
+
+    Advanced recipe filters (diet, cuisine, prep time)
+
+    Offline caching of recipes
+
+    Personalized recipe recommendations
+
+🆘 11. SUPPORT & CONTACT
+
+    If you encounter issues or have feedback:
+
+    📧 Email: monenekwena71@gmail.com
+
+    🐙 GitHub: https://github.com/ST10369269/OPSC6312_POE
