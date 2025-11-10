@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CookBook</string>
     <string name="default_web_client_id">Default Web Client Id</string>
@@ -14,7 +15,7 @@
     <string name="login_with_google">Login with Google</string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
     <string name="recipe_details">Recipe Details</string>
-    <string name="placeholder" />
+    <string name="placeholder" translatable="false"></string>
     <string name="add_ingredients_to_shopping_list">Add Ingredients to Shopping List</string>
     <string name="save_to_favorites">Save to Favorites</string>
     <string name="welcome_to_cookbook">Welcome to CookBook</string>
@@ -25,7 +26,7 @@
     <string name="clear_all_favorites">Clear All Favorites</string>
     <string name="welcome_back_chef">Welcome back, Chef 👋</string>
     <string name="discover_your_next_favorite_recipe_today">Discover your next favorite recipe today!</string>
-    <string name="search_recipes">Search recipes...</string>
+    <string name="search_recipes">Search recipes…</string>
     <string name="fresh_greens_with_chicken">Fresh greens with chicken</string>
     <string name="categories">🍴 Categories</string>
     <string name="breakfast">Breakfast</string>
@@ -60,14 +61,8 @@
     <string name="notifications_disabled">Notifications disabled</string>
     <string name="logged_out">You have been logged out</string>
 
-
     <string-array name="measurement_units">
         <item>Metric (grams, liters)</item>
         <item>Imperial (cups, ounces)</item>
-    </string-array>
-
-    <string-array name="language_options">
-        <item>English</item>
-        <item>isiZulu</item>
     </string-array>
 </resources>

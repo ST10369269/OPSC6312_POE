@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CookBook</string>
     <string name="default_web_client_id">Default Web Client Id</string>
@@ -14,7 +15,6 @@
     <string name="login_with_google">Ngena ngemvume nge-google</string>
     <string name="don_t_have_an_account_sign_up">Awunayo i-akhawunti? Bhalisela</string>
     <string name="recipe_details">Imininingwane yeresiphi</string>
-    <string name="placeholder" />
     <string name="add_ingredients_to_shopping_list">Engeza izithako ohlwini lokuthenga</string>
     <string name="save_to_favorites">Londoloza ezintandokazini</string>
     <string name="welcome_to_cookbook">Siyakwamukela ku-CookBook</string>
@@ -60,9 +60,9 @@
     <string name="notifications_disabled">Izaziso zikhutshaziwe</string>
     <string name="logged_out">Ukhishiwe</string>
 
-
     <string-array name="measurement_units">
         <item>Metric (grams, liters)</item>
         <item>Imperial (cups, ounces)</item>
     </string-array>
+
 </resources>
