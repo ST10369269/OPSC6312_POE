@@ -8,6 +8,9 @@ import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
 import kotlin.jvm.java
 import com.example.cookbook.R
+import com.example.cookbook.helpers.LocaleHelper
+import com.example.cookbook.helpers.SettingsManager
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -19,6 +22,9 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        // Apply saved settings before showing UI
+        SettingsManager.saveDarkMode(this, SettingsManager.isDarkModeEnabled(this))
+        LocaleHelper.setLocale(this, SettingsManager.getLanguage(this))
         setContentView(R.layout.activity_splash)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -33,6 +39,15 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
                 finish()
             }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
         }
     }
 }
