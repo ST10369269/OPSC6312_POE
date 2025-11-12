@@ -26,6 +26,7 @@
         android:id="@+id/addButton"
         android:text="@string/add_item"
         android:layout_marginBottom="24dp"
+        android:textColor="@color/white"
         android:backgroundTint="?android:attr/colorActivatedHighlight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
