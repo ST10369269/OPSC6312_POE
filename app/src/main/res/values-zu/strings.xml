@@ -59,6 +59,8 @@
     <string name="notifications_enabled">Izaziso zinikwe amandla</string>
     <string name="notifications_disabled">Izaziso zikhutshaziwe</string>
     <string name="logged_out">Ukhishiwe</string>
+    <string name="English">IsiNgisi</string>
+    <string name="Zulu">IsiZulu</string>
 
     <string-array name="measurement_units">
         <item>Metric (grams, liters)</item>

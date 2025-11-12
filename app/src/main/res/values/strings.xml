@@ -60,6 +60,8 @@
     <string name="notifications_enabled">Notifications enabled</string>
     <string name="notifications_disabled">Notifications disabled</string>
     <string name="logged_out">You have been logged out</string>
+    <string name="English">English</string>
+    <string name="Zulu">Zulu</string>
 
     <string-array name="measurement_units">
         <item>Metric (grams, liters)</item>
