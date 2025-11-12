@@ -15,10 +15,12 @@ import com.example.cookbook.fragments.ShoppingListFragment
 import com.example.cookbook.fragments.FavoritesFragment
 import com.example.cookbook.fragments.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var bottomNavigation: BottomNavigationView
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,26 +33,38 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
 
-        //bottomNavigation = findViewById(R.id.bottom_navigation)
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()
+
+        // Check if user is not logged in
+        if (auth.currentUser == null) {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+            return
+        }
+
+        // Initialize bottom navigation
+        bottomNavigation = findViewById(R.id.bottom_navigation)
 
         // Load the default fragment
         loadFragment(HomeFragment())
+        bottomNavigation.selectedItemId = R.id.nav_home
 
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNav.setOnItemSelectedListener { item ->
+        // Handle bottom navigation clicks
+        bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_home -> replaceFragment(HomeFragment())
-                R.id.nav_recipes -> replaceFragment(RecipesFragment())
-                R.id.nav_favorites -> replaceFragment(FavoritesFragment())
-                R.id.nav_shopping -> replaceFragment(ShoppingListFragment())
-                R.id.nav_settings -> replaceFragment(SettingsFragment())
+                R.id.nav_home -> loadFragment(HomeFragment())
+                R.id.nav_recipes -> loadFragment(RecipesFragment())
+                R.id.nav_favorites -> loadFragment(FavoritesFragment())
+                R.id.nav_shopping -> loadFragment(ShoppingListFragment())
+                R.id.nav_settings -> loadFragment(SettingsFragment())
             }
             true
         }
 
         // Handle system back presses
         onBackPressedDispatcher.addCallback(this) {
-            val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
+            val currentFragment = supportFragmentManager.findFragmentById(R.id.frame_layout)
             if (currentFragment !is HomeFragment) {
                 // If not on home, go back to home
                 loadFragment(HomeFragment())
@@ -64,14 +78,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
+            .replace(R.id.frame_layout, fragment)
             .commit()
-    }
-
-    private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
-        fragmentTransaction.commit()
     }
 }

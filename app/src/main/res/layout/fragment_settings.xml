@@ -19,7 +19,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#FF5252"
+            android:background="?android:attr/colorActivatedHighlight"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:title="@string/app_name"
             android:contentDescription="@string/settings_toolbar_desc" />
@@ -47,16 +47,18 @@
             android:text="@string/display_options"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:textAppearance="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switchDarkMode"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:padding="8dp"
             android:text="@string/enable_dark_mode"
+            android:textAppearance="@color/black"
             android:textSize="16sp"
             android:contentDescription="@string/enable_dark_mode"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -72,17 +74,19 @@
             android:text="@string/notifications"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:textAppearance="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switchNotifications"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:padding="8dp"
             android:text="@string/enable_notifications"
             android:textSize="16sp"
+            android:textAppearance="@color/black"
             android:contentDescription="@string/enable_notifications"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
 
@@ -97,6 +101,7 @@
             android:text="@string/measurement_units_label"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:textAppearance="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp" />
@@ -105,6 +110,7 @@
             android:id="@+id/spinnerUnits"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:textAppearance="@color/black"
             android:entries="@array/measurement_units"
             android:contentDescription="@string/measurement_units_label" />
 
@@ -119,12 +125,13 @@
             android:text="@string/language_label"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:textAppearance="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp" />
 
         <Spinner
-            android:id="@+id/languageSpinner"
+            android:id="@+id/language_spinner"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:entries="@array/language_options"
@@ -140,7 +147,7 @@
         <Button
             android:id="@+id/btnLogout"
             android:text="@string/logout"
-            android:backgroundTint="#FF5252"
+            android:backgroundTint="?android:attr/colorActivatedHighlight"
             android:textColor="#FFFFFF"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
